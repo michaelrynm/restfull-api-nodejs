@@ -1,0 +1,44 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "kanedi",
+    "password": "rahasia",
+    "name": "Eko kurniawan"
+}
+
+### f075c352-dc52-42a4-a3b0-e197446d50c5
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "kanedi",
+    "password": "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f075c352-dc52-42a4-a3b0-e197446d50c5
+
+
+###
+PATCH  http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: f075c352-dc52-42a4-a3b0-e197446d50c5
+
+{
+    "name": "Eko Kurniawan Kanedi"
+}
+
+###
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: f075c352-dc52-42a4-a3b0-e197446d50c5
